@@ -1,3 +1,31 @@
+# Lot-Link
+リンクをタグやメモとともに保存して管理するアプリケーションです。名前の由来は、ランダムなくじ引き（Lottery）とリンクを組み合わせました。次に何を歌うか、どのリンクを見るかを運に任せるワクワク感を出しています。
+
+
+
+## プロジェクト構成（ディレクトリ構造）
+
+主要なファイルとフォルダの役割は以下の通りです。
+
+- **`src/app/`**: アプリケーションのメインロジック。
+    - `layout.tsx`: 共通レイアウト。HTMLの `<body>` 構造などを定義。
+    - `page.tsx`: ホームページ（/）のメインコンポーネント。
+- **`src/components/`**: (作成予定) 再利用可能なUIパーツ。
+- **`public/`**: 画像、favicon、Webフォントなどの静的アセット。
+- **設定ファイル**:
+    - `package.json`: 依存関係とスクリプト（`npm run dev` など）。
+    - `tsconfig.json`: TypeScriptのコンパイル設定とエイリアス設定。
+    - `tailwind.config.ts`: Tailwind CSSのデザインシステム設定。
+    - `next.config.ts`: Next.js特有のランタイム設定。
+
+### 開発コマンド
+- 開発サーバー起動: `npm run dev`
+- プロダクションビルド: `npm run build`
+- 型チェック/Lint: `npm run lint`
+
+---
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
