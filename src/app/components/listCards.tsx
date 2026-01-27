@@ -3,7 +3,7 @@ export default function ListCards(props: {
     cards: card[];
     tags: string[] | undefined;
 }) {
-    const sortedCards = sortCards(props.cards, props.tags);
+    const filteredCards = filterCardsByTags(props.cards, props.tags);
     return (
         <div
             style={{
@@ -11,7 +11,7 @@ export default function ListCards(props: {
                 gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
             }}
         >
-            {sortedCards.map((card) => (
+            {filteredCards.map((card) => (
                 <div key={card.id} id={card.id}>
                     <Card card={card} />
                 </div>
@@ -20,18 +20,21 @@ export default function ListCards(props: {
     );
 }
 
-function sortCards(cards: card[], tags?: string[]): card[] {
+function filterCardsByTags(
+    cards: card[],
+    tags?: string[],
+    operator?: "and" | "or",
+): card[] {
+    // Default operator is "or"
     if (!tags || tags.length === 0) {
         return cards;
     } else {
         return cards.filter((card) => {
             if (!card.tags) return false;
-            for (const tag of tags) {
-                if (card.tags.includes(tag)) {
-                    return true;
-                }
+            if (operator === "and") {
+                return tags.every((tag) => card.tags!.includes(tag));
             }
-            return false;
+            return card.tags.some((tag) => tags.includes(tag));
         });
     }
 }
