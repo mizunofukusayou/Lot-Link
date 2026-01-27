@@ -16,15 +16,7 @@ export default function Card(props: { card: card }) {
             <a
                 href={props.card.url.href}
                 title={props.card.url.href}
-                style={{
-                    color: "#0066cc",
-                    textDecoration: "underline",
-                    overflowWrap: "break-word",
-                    display: "-webkit-box",
-                    WebkitLineClamp: 1,
-                    WebkitBoxOrient: "vertical",
-                    overflow: "hidden",
-                }}
+                className={`${styles.link} ${styles.shorttingText}`}
             >
                 {props.card.url.href}
             </a>
