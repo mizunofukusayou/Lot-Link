@@ -16,7 +16,7 @@ export const mockCards: CardData[] = [
             "https://another-example-asdfljasdlfjasldkfjalsdkjfalskdjfalsdkfjalsdkfj.com",
         ),
         title: "Another Example Example Example Example Example Example",
-        note: "Another example websitekkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk a a a affff a a a a a a a fffffa a a a a a a a a a a a a a afff a a a a a a a a a a a a a a a a a a a a a a a a a a a a   ",
+        note: "Another example website used for testing how long text is displayed in the user interface. This mock note intentionally contains a longer, more realistic description so that wrapping, truncation, and tooltip behavior can be verified during development. It describes an example site that aggregates articles, tutorials, and reference material, giving designers and engineers enough content to evaluate spacing, typography, and layout under near real-world conditions.",
         detail: "This is a detailed description of the example website.longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong long description.",
         tags: ["example"],
     },
