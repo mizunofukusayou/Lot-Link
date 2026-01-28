@@ -26,8 +26,17 @@ export default function Card(props: { card: CardData }) {
             </a>
             {props.card.note && <p className="break-all line-clamp-2">{props.card.note}</p>}
             {props.card.detail && (
-                <details>
-                    <summary className="cursor-pointer">詳細を表示</summary>
+                <details className="group">
+                    <summary className="cursor-pointer flex items-center justify-center gap-1">
+                        <span className="group-open:hidden">詳細を表示</span>
+                        <span className="hidden group-open:inline">詳細を非表示</span>
+                        <span
+                            aria-hidden="true"
+                            className="ml-1 transition-transform duration-200 group-open:rotate-90"
+                        >
+                            ▶
+                        </span>
+                    </summary>
                     <p className="break-all whitespace-pre-wrap text-left mt-2 border rounded-3xl p-2">
                         {props.card.detail}
                     </p>
