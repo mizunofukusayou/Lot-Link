@@ -16,7 +16,7 @@ export default function Card(props: { card: CardData }) {
             <a
                 href={props.card.url.href}
                 title={props.card.url.href}
-                className="text-blue-600 underline wrap-break-word line-clamp-1"
+                className="text-blue-600 underline break-normal line-clamp-1"
             >
                 {props.card.url.href}
             </a>
