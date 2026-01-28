@@ -24,13 +24,12 @@ function filterCardsByTags(
     const op = operator ?? "or";
     if (!tags || tags.length === 0) {
         return cards;
-    } else {
-        return cards.filter((card) => {
-            if (!card.tags) return false;
-            if (op === "and") {
-                return tags.every((tag) => card.tags!.includes(tag));
-            }
-            return card.tags.some((tag) => tags.includes(tag));
-        });
     }
+    return cards.filter((card) => {
+        if (!card.tags) return false;
+        if (op === "and") {
+            return tags.every((tag) => card.tags!.includes(tag));
+        }
+        return card.tags.some((tag) => tags.includes(tag));
+    });
 }

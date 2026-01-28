@@ -6,7 +6,8 @@ export const mockCards: CardData[] = [
         id: "card0001-70cd-4aaa-87b8-7e9104b8a562",
         url: new URL("https://example.com"),
         title: "Another Example",
-        notes: "Example website",
+        note: "Example website",
+        detail: "This is a detailed description of the example website.",
         tags: ["example", "website"],
     },
     {
@@ -15,7 +16,8 @@ export const mockCards: CardData[] = [
             "https://another-example-asdfljasdlfjasldkfjalsdkjfalskdjfalsdkfjalsdkfj.com",
         ),
         title: "Another Example Example Example Example Example Example",
-        notes: "Another example websitekkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk a a a affff a a a a a a a fffffa a a a a a a a a a a a a a afff a a a a a a a a a a a a a a a a a a a a a a a a a a a a   ",
+        note: "Another example websitekkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk a a a affff a a a a a a a fffffa a a a a a a a a a a a a a afff a a a a a a a a a a a a a a a a a a a a a a a a a a a a   ",
+        detail: "This is a detailed description of the example website.longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong long description.",
         tags: ["example"],
     },
     {
@@ -24,7 +26,8 @@ export const mockCards: CardData[] = [
             "https://another-example-asdfljasdlfjasldkfjalsdkjfalskdjfalsdkfjalsdkfj.com",
         ),
         title: "Another Example",
-        notes: "Another example website",
+        note: "Another example website",
+        detail: "",
         tags: ["example"],
     },
     {
@@ -33,7 +36,7 @@ export const mockCards: CardData[] = [
             "https://another-example-asdfljasdlfjasldkfjalsdkjfalskdjfalsdkfjalsdkfj.com",
         ),
         title: "Another Example",
-        notes: "Another example website",
+        note: "Another example website",
         tags: ["example"],
     },
     {
@@ -42,7 +45,7 @@ export const mockCards: CardData[] = [
             "https://another-example-asdfljasdlfjasldkfjalsdkjfalskdjfalsdkfjalsdkfj.com",
         ),
         title: "Another Example",
-        notes: "Another example website",
+        note: "Another example website",
         tags: ["example"],
     },
 ];
