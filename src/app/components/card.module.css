@@ -10,17 +10,3 @@
     text-align: center;
     overflow-wrap: break-word;
 }
-
-.link {
-    color: #0066cc;
-    text-decoration: underline;
-}
-
-.shorttingText {
-    overflow-wrap: break-word;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}

@@ -5,12 +5,7 @@ export default function ListCards(props: {
 }) {
     const filteredCards = filterCardsByTags(props.cards, props.tags);
     return (
-        <div
-            style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
-            }}
-        >
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))]">
             {filteredCards.map((card) => (
                 <div key={card.id} id={card.id}>
                     <Card card={card} />
@@ -26,12 +21,13 @@ function filterCardsByTags(
     operator?: "and" | "or",
 ): CardData[] {
     // Default operator is "or"
+    const op = operator ?? "or";
     if (!tags || tags.length === 0) {
         return cards;
     } else {
         return cards.filter((card) => {
             if (!card.tags) return false;
-            if (operator === "and") {
+            if (op === "and") {
                 return tags.every((tag) => card.tags!.includes(tag));
             }
             return card.tags.some((tag) => tags.includes(tag));

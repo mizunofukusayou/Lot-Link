@@ -13,7 +13,7 @@ export const mockCards: CardData[] = [
     {
         id: crypto.randomUUID(),
         url: new URL(
-            "https://another-example-asdfljasd;lfjasldkfjalsdkjfalskdjfa;lsdkfja;lsdkfj.com",
+            "https://another-example-asdfljasdlfjasldkfjalsdkjfalskdjfalsdkfjalsdkfj.com",
         ),
         title: "Another Example Example Example Example Example Example",
         notes: "Another example websitekkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk a a a affff a a a a a a a fffffa a a a a a a a a a a a a a afff a a a a a a a a a a a a a a a a a a a a a a a a a a a a   ",
@@ -22,7 +22,7 @@ export const mockCards: CardData[] = [
     {
         id: crypto.randomUUID(),
         url: new URL(
-            "https://another-example-asdfljasd;lfjasldkfjalsdkjfalskdjfa;lsdkfja;lsdkfj.com",
+            "https://another-example-asdfljasdlfjasldkfjalsdkjfalskdjfalsdkfjalsdkfj.com",
         ),
         title: "Another Example",
         notes: "Another example website",
@@ -31,7 +31,7 @@ export const mockCards: CardData[] = [
     {
         id: crypto.randomUUID(),
         url: new URL(
-            "https://another-example-asdfljasd;lfjasldkfjalsdkjfalskdjfa;lsdkfja;lsdkfj.com",
+            "https://another-example-asdfljasdlfjasldkfjalsdkjfalskdjfalsdkfjalsdkfj.com",
         ),
         title: "Another Example",
         notes: "Another example website",
@@ -40,7 +40,7 @@ export const mockCards: CardData[] = [
     {
         id: crypto.randomUUID(),
         url: new URL(
-            "https://another-example-asdfljasd;lfjasldkfjalsdkjfalskdjfa;lsdkfja;lsdkfj.com",
+            "https://another-example-asdfljasdlfjasldkfjalsdkjfalskdjfalsdkfjalsdkfj.com",
         ),
         title: "Another Example",
         notes: "Another example website",
