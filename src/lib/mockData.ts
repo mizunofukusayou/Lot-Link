@@ -1,17 +1,16 @@
 // Sample data for demonstration
 import { CardData } from "@/app/components/card";
-import crypto from "crypto";
 export const mockTags: string[] = ["example", "website"];
 export const mockCards: CardData[] = [
     {
-        id: crypto.randomUUID(),
+        id: "card0001-70cd-4aaa-87b8-7e9104b8a562",
         url: new URL("https://example.com"),
         title: "Another Example",
         notes: "Example website",
         tags: ["example", "website"],
     },
     {
-        id: crypto.randomUUID(),
+        id: "card0002-4468-49a6-bb6f-1811391f0e3b",
         url: new URL(
             "https://another-example-asdfljasdlfjasldkfjalsdkjfalskdjfalsdkfjalsdkfj.com",
         ),
@@ -20,7 +19,7 @@ export const mockCards: CardData[] = [
         tags: ["example"],
     },
     {
-        id: crypto.randomUUID(),
+        id: "card0003-9bba-4cd8-8465-cc6765d6f5ef",
         url: new URL(
             "https://another-example-asdfljasdlfjasldkfjalsdkjfalskdjfalsdkfjalsdkfj.com",
         ),
@@ -29,7 +28,7 @@ export const mockCards: CardData[] = [
         tags: ["example"],
     },
     {
-        id: crypto.randomUUID(),
+        id: "card0004-ec20-4114-a12a-e8f64fbc589e",
         url: new URL(
             "https://another-example-asdfljasdlfjasldkfjalsdkjfalskdjfalsdkfjalsdkfj.com",
         ),
@@ -38,7 +37,7 @@ export const mockCards: CardData[] = [
         tags: ["example"],
     },
     {
-        id: crypto.randomUUID(),
+        id: "card0005-6fcb-4554-9a28-ef3a8cfd5022",
         url: new URL(
             "https://another-example-asdfljasdlfjasldkfjalsdkjfalskdjfalsdkfjalsdkfj.com",
         ),
