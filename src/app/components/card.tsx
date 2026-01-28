@@ -1,7 +1,7 @@
 import { UUID } from "crypto";
 import styles from "@/app/components/card.module.css";
 
-export type card = {
+export type CardData = {
     id: UUID;
     url: URL;
     title: string;
@@ -9,7 +9,7 @@ export type card = {
     tags?: string[];
 };
 
-export default function Card(props: { card: card }) {
+export default function Card(props: { card: CardData }) {
     return (
         <div className={styles.card}>
             <p>{props.card.title}</p>

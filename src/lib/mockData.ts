@@ -1,8 +1,8 @@
 // Sample data for demonstration
-import { card } from "@/app/components/card";
+import { CardData } from "@/app/components/card";
 import crypto from "crypto";
 export const mockTags: string[] = ["example", "website"];
-export const mockCards: card[] = [
+export const mockCards: CardData[] = [
     {
         id: crypto.randomUUID(),
         url: new URL("https://example.com"),

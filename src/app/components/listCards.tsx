@@ -1,6 +1,6 @@
-import Card, { card } from "@/app/components/card";
+import Card, { CardData } from "@/app/components/card";
 export default function ListCards(props: {
-    cards: card[];
+    cards: CardData[];
     tags: string[] | undefined;
 }) {
     const filteredCards = filterCardsByTags(props.cards, props.tags);
@@ -21,10 +21,10 @@ export default function ListCards(props: {
 }
 
 function filterCardsByTags(
-    cards: card[],
+    cards: CardData[],
     tags?: string[],
     operator?: "and" | "or",
-): card[] {
+): CardData[] {
     // Default operator is "or"
     if (!tags || tags.length === 0) {
         return cards;
