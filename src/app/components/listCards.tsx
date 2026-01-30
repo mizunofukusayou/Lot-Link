@@ -24,7 +24,7 @@ function filterCardsByTags(
     // Default operator is "or"
     const op = operator ?? "or";
     if (!tags || tags.length === 0) {
-        return [] as CardData[];
+        return [];
     }
     return cards.filter((card) => {
         if (!card.tags) return false;
