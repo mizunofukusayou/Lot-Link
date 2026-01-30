@@ -1,8 +1,6 @@
-import { UUID } from "crypto";
-
 export type CardData = {
-    id: UUID;
-    url: URL;
+    id: string;
+    url: string;
     title: string;
     note?: string;
     detail?: string;
@@ -16,20 +14,24 @@ export default function Card(props: { card: CardData }) {
                 {props.card.title}
             </h2>
             <a
-                href={props.card.url.href}
-                title={props.card.url.href}
+                href={props.card.url}
+                title={props.card.url}
                 className="text-blue-600 underline break-all line-clamp-1 cursor-pointer"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                {props.card.url.href}
+                {props.card.url}
             </a>
-            {props.card.note && <p className="break-all line-clamp-2">{props.card.note}</p>}
+            {props.card.note && (
+                <p className="break-all line-clamp-2">{props.card.note}</p>
+            )}
             {props.card.detail && (
                 <details className="group">
                     <summary className="cursor-pointer flex items-center justify-center gap-1">
                         <span className="group-open:hidden">詳細を表示</span>
-                        <span className="hidden group-open:inline">詳細を非表示</span>
+                        <span className="hidden group-open:inline">
+                            詳細を非表示
+                        </span>
                         <span
                             aria-hidden="true"
                             className="ml-1 transition-transform duration-200 group-open:rotate-90"
