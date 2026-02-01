@@ -1,23 +1,3 @@
-/*
-  Warnings:
-
-  - You are about to drop the `User` table. If the table is not empty, all the data it contains will be lost.
-  - You are about to drop the `_TagToUser` table. If the table is not empty, all the data it contains will be lost.
-  - A unique constraint covering the columns `[name]` on the table `Tag` will be added. If there are existing duplicate values, this will fail.
-
-*/
--- DropForeignKey
-ALTER TABLE "_TagToUser" DROP CONSTRAINT "_TagToUser_A_fkey";
-
--- DropForeignKey
-ALTER TABLE "_TagToUser" DROP CONSTRAINT "_TagToUser_B_fkey";
-
--- DropTable
-DROP TABLE "User";
-
--- DropTable
-DROP TABLE "_TagToUser";
-
 -- CreateTable
 CREATE TABLE "Card" (
     "id" TEXT NOT NULL,
@@ -32,6 +12,14 @@ CREATE TABLE "Card" (
 );
 
 -- CreateTable
+CREATE TABLE "Tag" (
+    "id" SERIAL NOT NULL,
+    "name" TEXT NOT NULL,
+
+    CONSTRAINT "Tag_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
 CREATE TABLE "_CardToTag" (
     "A" TEXT NOT NULL,
     "B" INTEGER NOT NULL,
@@ -40,13 +28,10 @@ CREATE TABLE "_CardToTag" (
 );
 
 -- CreateIndex
-CREATE UNIQUE INDEX "Card_id_key" ON "Card"("id");
+CREATE UNIQUE INDEX "Tag_name_key" ON "Tag"("name");
 
 -- CreateIndex
 CREATE INDEX "_CardToTag_B_index" ON "_CardToTag"("B");
-
--- CreateIndex
-CREATE UNIQUE INDEX "Tag_name_key" ON "Tag"("name");
 
 -- AddForeignKey
 ALTER TABLE "_CardToTag" ADD CONSTRAINT "_CardToTag_A_fkey" FOREIGN KEY ("A") REFERENCES "Card"("id") ON DELETE CASCADE ON UPDATE CASCADE;

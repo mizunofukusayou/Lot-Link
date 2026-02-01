@@ -8,7 +8,7 @@ datasource db {
 }
 
 model Card {
-  id         String   @id @unique @default(uuid())
+  id         String   @id @default(uuid())
   url        String
   title      String
   note       String?
@@ -19,7 +19,7 @@ model Card {
 }
 
 model Tag {
-  id    Int    @id @unique @default(autoincrement())
+  id    Int    @id @default(autoincrement())
   name  String @unique
   cards Card[]
 }
